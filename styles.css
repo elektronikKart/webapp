@@ -104,7 +104,7 @@ body.wrong {
     font-weight: bold;
     border-radius: 5px;
     padding: 5px 10px;
-    position: relative; top: -1.6rem; left:10rem;
+    position: relative; top: -1.6rem; left:9rem;
     color: black;
     outline: none;s
 }
