@@ -8,6 +8,7 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 
 let shuffledQuestions, currentQuestionIndex
 let countRightAnswers = 0;
+document.getElementById('right-answers').innerHTML = countRightAnswers;
 
 startButton.addEventListener('click', startGame)
 finishButton.addEventListener('click', finishGame)
