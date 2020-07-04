@@ -30,11 +30,11 @@ body.wrong {
 }
 
 .container {
-    width: 800px;
+    width: 100vw;
     max-width: 80%;
     background-color: white;
-    border-radius: 10px;
-    padding: 30px;
+    border-radius: 12px;
+    padding: 35px;
     box-shadow: 0 0 10px 2px;
 }
 
@@ -104,7 +104,7 @@ body.wrong {
     font-weight: bold;
     border-radius: 5px;
     padding: 5px 10px;
-    position: relative; top: -1.6rem; left:7rem;
+    position: relative; top: -5.5vw; left:34vw;
     color: black;
     outline: none;
 }
