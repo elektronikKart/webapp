@@ -34,7 +34,7 @@ body.wrong {
     max-width: 80%;
     background-color: white;
     border-radius: 10px;
-    padding: 45px;
+    padding: 40px;
     box-shadow: 0 0 10px 2px;
 }
 
@@ -104,7 +104,7 @@ body.wrong {
     font-weight: bold;
     border-radius: 5px;
     padding: 5px 10px;
-    position: relative; top: -1.6rem; left:9rem;
+    position: relative; top: -1.6rem; left:7rem;
     color: black;
     outline: none;s
 }
