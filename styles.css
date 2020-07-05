@@ -57,6 +57,19 @@ body.wrong {
     outline: none;
 }
 
+.btn2 {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: rgba(255, 255, 0, 0.39) ;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 20px 10px;
+    color: black;
+    outline: none;
+
+}
+
 .btn:hover {
     border-color: black;
 }
@@ -71,6 +84,7 @@ body.wrong {
 }
 
 .start-btn, .next-btn, .home-btn, .finish-btn {
+    display
     font-size: 1rem;
     font-weight: bold;
     padding: 10px, 20px;
@@ -98,11 +112,11 @@ body.wrong {
 
 .coins-btn {
     --hue: var(--hue-neutral);
-    border: 1px solid hsl(var(--hue), 100%, 30%);
+    border: 2.5px solid hsl(var(--hue), 100%, 30%);
     background-color: white;
     font-size: 1rem;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 7px;
     padding: 5px 10px;
     position: relative; top: -5vw;
     color: black;
