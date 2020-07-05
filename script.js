@@ -1,7 +1,9 @@
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const homeButton = document.getElementById('home-btn')
+const returnButton = document.getElementById('return-btn')
 const finishButton = document.getElementById('finish-btn')
+const itemsList = document.getElementById('items-list')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
@@ -12,6 +14,8 @@ document.getElementById('right-answers').innerHTML = countRightAnswers;
 
 startButton.addEventListener('click', startGame)
 finishButton.addEventListener('click', finishGame)
+homeButton.addEventListener('click', homePage)
+returnButton.addEventListener('click', returnMenu)
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
@@ -95,6 +99,21 @@ function finishGame() {
   finishButton.classList.add('hide')
   startButton.classList.remove('hide')
   homeButton.classList.remove('hide')
+  clearStatusClass(document.body)
+}
+
+function homePage() {
+  startButton.classList.add('hide')
+  homeButton.classList.add('hide')
+  returnButton.classList.remove('hide')
+  itemsList.classList.remove('hide')
+  clearStatusClass(document.body)
+}
+function returnMenu() {
+  startButton.classList.remove('hide')
+  homeButton.classList.remove('hide')
+  returnButton.classList.add('hide')
+  itemsList.classList.add('hide')
   clearStatusClass(document.body)
 }
 
@@ -282,4 +301,3 @@ const questions = [
     ]
   },
 ]
-
