@@ -9,23 +9,26 @@
 </head>
 <body>
     <div class="container">
-        <div class = "score-counter">
+        <div class="score-counter">
             <button class="coins-btn">Coins:<span id="right-answers"></span></button>
         </div>
+        <div id="items-list" class="buy-items hide">
+            <button id="bike" class="btn2">&#x1F6B4<br>10<br>coins</button>
+            <button id="motorbike" class="btn2">&#x1F3CD<br>50<br>coins</button>
+            <button id="car" class="btn2">&#x1F697<br>100<br>coins</button>
+            <button id="sports-car" class="btn2">&#x1F3CE<br>1000<br>coins</button>
+        </div>
         <div id="question-container" class="hide">
-            <div class = 'question' id="question">Question</div>
-            <div id="answer-buttons" class="btn-grid">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
-            </div>
+            <div class='question' id="question">Question</div>
+            <div id="answer-buttons" class="btn-grid"></div>
         </div>
         <div class="controls">
             <button id="start-btn" class="start-btn btn">Start</button>
             <button id="home-btn" class="home-btn btn">My Home</button>
             <button id="next-btn" class="next-btn btn hide">Next</button>
             <button id="finish-btn" class="finish-btn btn hide">Finish</button>
+            <button id="return-btn" class="return-btn btn hide">Return</button>
+
         </div>
     </div> 
 </body>
