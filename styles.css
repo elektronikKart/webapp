@@ -85,7 +85,7 @@ body.wrong {
 
 .start-btn, .next-btn, .home-btn, .finish-btn {
     display
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
     padding: 10px, 20px;
     margin: 2px;
