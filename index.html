@@ -8,9 +8,10 @@
     <title>Quiz App</title>
 </head>
 <body>
-    <div class="container">
+    <div id="main-menu" class="container hide">
         <div class="score-counter">
-            <button class="coins-btn">Coins:<span id="right-answers"></span></button>
+            <button id="score-btn" class="coins-btn">Coins:<span id="right-answers"></span></button>
+            <button id="cheat-btn" class="btn2 hide">Cheat!</button>
         </div>
         <div id="items-list" class="buy-items hide">
             <button id="bike" class="btn2">&#x1F6B4<br>10<br>coins</button>
@@ -28,8 +29,16 @@
             <button id="next-btn" class="next-btn btn hide">Next</button>
             <button id="finish-btn" class="finish-btn btn hide">Finish</button>
             <button id="return-btn" class="return-btn btn hide">Return</button>
-
         </div>
-    </div> 
+    </div>
+    <div id="select-menu" class="container">
+        <div class="btn-grid">
+            <button id="A1-btn" class="btn">A1</button>
+            <button id="A2-btn" class="btn">A2</button>
+            <button id="A3-btn" class="btn">B1</button>
+            <button id="A3-btn" class="btn">B2</button>
+            <button id="mainMenu-btn" class="return-btn btn2">Main Menu</button>
+        </div>
+    </div>
 </body>
 </html>
