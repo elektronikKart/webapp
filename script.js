@@ -7,19 +7,102 @@ const itemsList = document.getElementById('items-list')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
+const mainMenu = document.getElementById('main-menu')
+const selectMenu = document.getElementById('select-menu')
+const mainMenuButton = document.getElementById('mainMenu-btn')
 
 let shuffledQuestions, currentQuestionIndex
-let countRightAnswers = 0;
-document.getElementById('right-answers').innerHTML = countRightAnswers;
+let coins = 0;
+document.getElementById('right-answers').innerHTML = coins;
+
+// Cheat button codes
+const coinsButton = document.getElementById('score-btn')
+const cheatButton = document.getElementById('cheat-btn')
+let coinsButtonClickCount = 0;
+coinsButton.addEventListener('click', cheatButtonActivate)
+cheatButton.addEventListener('click', cheatActivate)
+
+function cheatButtonActivate() {
+if(coinsButtonClickCount >= 4) {
+  cheatButton.classList.remove('hide');
+  coinsButtonClickCount = 0;
+}
+else {
+  coinsButtonClickCount++;
+}
+}
+
+function cheatActivate() {
+  coins+=100000;
+  cheatButton.classList.add('hide');
+  document.getElementById('right-answers').innerHTML = coins;
+}
+// Cheat button codes
+
+// Prize Menu codes
+const bike = document.getElementById('bike')
+const motorbike = document.getElementById('motorbike')
+const car = document.getElementById('car')
+const sportsCar = document.getElementById('sports-car')
+
+let bikeToken = 0;
+let motorbikeToken = 0;
+let carToken = 0;
+let sportsCarToken = 0;
+
+bike.addEventListener('click', bikeBuy)
+motorbike.addEventListener('click', motorbikeBuy)
+car.addEventListener('click', carBuy)
+sportsCar.addEventListener('click', sportsCarBuy)
+
+function bikeBuy() {
+  if(bikeToken == 0 & coins >= 10) {
+  coins-=10;
+  bikeToken = 1;
+  bike.innerText = String.fromCodePoint(0x1F6B4) + ' ' + String.fromCodePoint(0x2705);
+  document.getElementById('right-answers').innerHTML = coins;
+  }
+}
+
+function motorbikeBuy() {
+  if(motorbikeToken == 0 & coins >= 50) {
+  coins-=50;
+  motorbikeToken = 1;
+  motorbike.innerText = String.fromCodePoint(0x1F3CD) + ' ' + String.fromCodePoint(0x2705);
+  document.getElementById('right-answers').innerHTML = coins;
+  }
+}
+
+function carBuy() {
+  if(carToken == 0 & coins >= 100) {
+  coins-=100;
+  carToken = 1;
+  car.innerText = String.fromCodePoint(0x1F697) + ' ' + String.fromCodePoint(0x2705);
+  document.getElementById('right-answers').innerHTML = coins;
+  }
+}
+
+function sportsCarBuy() {
+  if(sportsCarToken == 0 & coins >= 1000) {
+  coins-=1000;
+  sportsCarToken = 1;
+  sportsCar.innerText = String.fromCodePoint(0x1F3CE) + ' ' + String.fromCodePoint(0x2705);
+  document.getElementById('right-answers').innerHTML = coins;
+  }
+}
+// Prize menu codes
+
 
 startButton.addEventListener('click', startGame)
 finishButton.addEventListener('click', finishGame)
 homeButton.addEventListener('click', homePage)
 returnButton.addEventListener('click', returnMenu)
+mainMenuButton.addEventListener('click', returnMainMenu)
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
 })
+
 
 function startGame() {
   startButton.classList.add('hide')
@@ -73,10 +156,10 @@ function selectAnswer(e) {
     startButton.classList.remove('hide')
   }
   if (selectedButton.dataset = correct) {
-    countRightAnswers++;
+    coins++;
  // +1, change it if you need +10, +25 etc
  }
- document.getElementById('right-answers').innerHTML = countRightAnswers; // span will show the score
+ document.getElementById('right-answers').innerHTML = coins; // span will show the score
 }
 
 function setStatusClass(element, correct) {
@@ -115,6 +198,11 @@ function returnMenu() {
   returnButton.classList.add('hide')
   itemsList.classList.add('hide')
   clearStatusClass(document.body)
+}
+
+function returnMainMenu() {
+  selectMenu.classList.add('hide')
+  mainMenu.classList.remove('hide')
 }
 
 const questions = [
