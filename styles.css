@@ -84,7 +84,7 @@ body.wrong {
     --hue: var(--hue-wrong);
 }
 
-.start-btn, .next-btn, .home-btn, .finish-btn {
+.start-btn, .next-btn, .home-btn, .finish-btn, .play-btn {
     display
     font-size: 1rem;
     font-weight: bold;
