@@ -8,36 +8,49 @@
     <title>Quiz App</title>
 </head>
 <body>
-    <div id="main-menu" class="container hide">
+    <div class = "container">
         <div class="score-counter">
             <button id="score-btn" class="coins-btn">Coins:<span id="right-answers"></span></button>
             <button id="cheat-btn" class="btn2 hide">Cheat!</button>
         </div>
-        <div id="items-list" class="buy-items hide">
-            <button id="bike" class="btn2">&#x1F6B4<br>10<br>coins</button>
-            <button id="motorbike" class="btn2">&#x1F3CD<br>50<br>coins</button>
-            <button id="car" class="btn2">&#x1F697<br>100<br>coins</button>
-            <button id="sports-car" class="btn2">&#x1F3CE<br>1000<br>coins</button>
+        <div id="main-menu">
+            <div id="items-list" class="buy-items hide">
+                <button id="bike" class="btn2">&#x1F6B4<br>10<br>coins</button>
+                <button id="motorbike" class="btn2">&#x1F3CD<br>50<br>coins</button>
+                <button id="car" class="btn2">&#x1F697<br>100<br>coins</button>
+                <button id="sports-car" class="btn2">&#x1F3CE<br>1000<br>coins</button>  
+            </div>
+            <div class="controls">
+                <button id="play-btn" class="play-btn btn">Play</button>
+                <button id="home-btn" class="home-btn btn">My Home</button>
+                <button id="return-btn" class="return-btn btn hide">Return</button>
+            </div>
         </div>
-        <div id="question-container" class="hide">
-            <div class='question' id="question">Question</div>
-            <div id="answer-buttons" class="btn-grid"></div>
-        </div>
-        <div class="controls">
-            <button id="start-btn" class="start-btn btn">Start</button>
-            <button id="home-btn" class="home-btn btn">My Home</button>
-            <button id="next-btn" class="next-btn btn hide">Next</button>
-            <button id="finish-btn" class="finish-btn btn hide">Finish</button>
-            <button id="return-btn" class="return-btn btn hide">Return</button>
-        </div>
-    </div>
-    <div id="select-menu" class="container">
-        <div class="btn-grid">
-            <button id="A1-btn" class="btn">A1</button>
-            <button id="A2-btn" class="btn">A2</button>
-            <button id="A3-btn" class="btn">B1</button>
-            <button id="A3-btn" class="btn">B2</button>
-            <button id="mainMenu-btn" class="return-btn btn2">Main Menu</button>
+        <div id="select-menu" class="hide">
+            <div id="question-container" class="hide">
+                <div class='question' id="question">Question</div>
+                <div id="answer-buttons" class="btn-grid"></div>
+            </div>
+            <div class="btn-grid">
+                <button id="a1-btn" class="btn">A1</button>
+                <button id="a1-emoji-btn" class="btn hide">emoji A1</button>
+                <button id="a1a-btn" class="btn hide">pre-A1</button>
+                <button id="a1b-btn" class="btn hide">mid-A1</button>
+                <button id="a1c-btn" class="btn hide">late-A1</button>
+                <button id="a2-btn" class="btn">A2</button>
+                <button id="b1-btn" class="btn">B1</button>
+                <button id="b2-btn" class="btn">B2</button>
+                <button id="mainMenu-btn" class="return-btn btn2">Main Menu</button>
+            </div>
+            <div id="question-container" class="hide">
+                <div class='question' id="question">Question</div>
+                <div id="answer-buttons" class="btn-grid"></div>
+            </div>
+            <div class="controls">
+                <button id="start-btn" class="start-btn btn hide">Start</button>
+                <button id="next-btn" class="next-btn btn hide">Next</button>
+                <button id="finish-btn" class="finish-btn btn hide">Finish</button>
+            </div>
         </div>
     </div>
 </body>
